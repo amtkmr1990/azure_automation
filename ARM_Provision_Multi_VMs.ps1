@@ -4,7 +4,7 @@
 # This script is intended to Create Windows based VMs 
 
 
- $username = sa
+ $username = <username>
     
  $pass= ConvertTo-SecureString <password> -AsPlainText -Force
  $Cred = New-Object System.Management.Automation.PsCredential($username,$pass)
@@ -12,12 +12,12 @@
  Login-AzureRmAccount -credential $Cred
 
 
- Select-AzureRmSubscription -SubscriptionName "Cloud Engineering - Dev"
+ Select-AzureRmSubscription -SubscriptionName <subscriptionname>
 
 
 $credvm = Get-Credential
 $NumberOfVM = '3';
-$ResourceGroupName = "Atul_Hadoop_Dev"
+$ResourceGroupName = <resource>
 $Location = "North Central US"
 $PublisherName = "Redhat"
 $ImageOffer = "RHEL"
@@ -25,7 +25,7 @@ $ImageSkus = "7.2"
 #$Ostype = "Windows"
 
 ## Storage
-$StorageName = "atulhadoopdevstorage"
+$StorageName = <storagename>
 $StorageType = "Standard_LRS"
 
 
