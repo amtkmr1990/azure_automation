@@ -1,7 +1,7 @@
 ﻿
 
 
-# This script is intended to Create Windows based VMs 
+# This script is intended to Create ARM based VMs 
 
 
  $username = <username>
